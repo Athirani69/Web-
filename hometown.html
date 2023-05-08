@@ -1,0 +1,26 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+changing the background color
+</title>
+</head>
+<body style = "text-align:center;">
+<h1 style = "color:blue;" >
+Welcome
+</h1>
+<button type="button" id="color-button" onclick="changeBg()">Click Here
+</button>
+<br>
+<script>
+document.writeln( "Click on button to change the background color");
+const pageBody = document.querySelector("body");
+function changeBg()
+{
+let color = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+pageBody.style.background = color;
+}
+</script>
+</body>
+</html>

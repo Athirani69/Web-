@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>
+fn strng and math 
+</title>
+</head>
+<body bgcolor="lightblue">
+
+<h1 style="text-align:center">JavaScript Strings methods</h1>
+<h3>1.STRING LENGTH</h3>
+<p>The length of the string is:</p>
+<p id="demo"></p>
+
+<h3>2.STRING SLICE</h3>
+<p>Slicing of the string is:</p>
+<p id="demo1"></p>
+
+<h3>3.STRING SUBSTRING</h3>
+
+<p>Substring of the string is:</p>
+<p id="demo2"></p>
+
+
+<h3>4.STRING REPLACE</h3>
+<button onclick="myFunction()">Try it</button>
+<p id="demo3">Please visit Microsoft!</p>
+
+<h3>5.STRING UPPERCASE</h3>
+
+<button onclick="myFunctions()">Try</button>
+<p id="demo4">Hello World!</p>
+
+    <h1 style="text-align:center">JavaScript math object</h1>
+
+
+
+<h2>1.Math Round</h2>
+<p>Math.round(x) returns the value of x rounded to its nearest integer:</p>
+<p id="demo5"></p>
+
+<h2>2.Math Ceil</h2>
+<p>Math.ceil() rounds a number <strong>up</strong> to its nearest integer:</p>
+<p id="demo6"></p>
+
+<h2>3.Math floor</h2>
+<p>Math.floor(x) returns the value of x rounded <strong>down</strong> to its nearest integer:</p>
+<p id="demo7"></p>
+
+<h2>4.Math Trunc</h2>
+<p>Math.trunc(x) returns the integer part of x:</p>
+<p id="demo8"></p>
+
+<h2>4.Math Sign</h2>
+<p>Math.sign(x) returns if x is negative, null or positive:</p>
+<p id="demo9"></p>
+
+<h2>5.Math Pow</h2>
+<p>Math.pow(x,y) returns the value of x to the power of y:</p>
+<p id="demoo"></p>
+
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML = text.length;
+
+
+let texts = "Apple, Banana, Kiwi";
+let part = texts.slice(7,13);
+document.getElementById("demo1").innerHTML = part;
+
+
+let str = "Apple, orange, Kiwi";
+document.getElementById("demo2").innerHTML = str.substring(7,13);
+
+function myFunction() {
+  let textt = document.getElementById("demo3").innerHTML;
+  document.getElementById("demo3").innerHTML =
+  textt.replace("Microsoft","W3Schools");
+}
+
+
+function myFunctions() {
+  let tex = document.getElementById("demo4").innerHTML;
+  document.getElementById("demo4").innerHTML =
+  tex.toUpperCase();
+}
+
+
+
+
+
+document.getElementById("demo5").innerHTML = Math.round(4.6);
+document.getElementById("demo6").innerHTML = Math.ceil(4.4);
+document.getElementById("demo7").innerHTML = Math.floor(4.7);
+document.getElementById("demo8").innerHTML = Math.trunc(4.7);
+document.getElementById("demo9").innerHTML = Math.sign(4);
+document.getElementById("demoo").innerHTML = Math.pow(8,2);
+</script>
+
+</body>
+</html>

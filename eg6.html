@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>
+Form</title>
+
+<script>
+    function Form(){
+        var a=document.forms['myForm']['name'].value;
+        if(a==""){
+            alert("nme must be filled out");
+            return false;
+        }
+        var b=document.forms['myForm']['address'].value;
+        if(b==""){
+            alert("adrs must b filled out");
+            return false;
+        }
+        var c=document.forms['myForm']['mail'].value;
+        if(c==""){
+            alert("mail mst b filled");
+            return false;
+        }
+        var n=document.forms['myForm']['no'].value;
+        if(isNaN(n)){
+            document.getElementById("nmbrtxt").innerHTML="please ntr numrc val";
+            return false;
+        }
+    }
+</script>
+
+
+<body>
+
+    <form name="myForm" action="/submission.html" onsubmit="return Form()" method="POST">
+    <table cellpadding="9" cellspacing="8">
+    <td colspan=2>
+    <h1> <center>FORM REGISTRATION </center> </h1>
+    <hr>
+    </td>
+    
+    
+    <tr>
+    <td><h3>Applicant Name: </h3></td>
+    <td><input name="name" type="text" size="30" ></td>
+    </tr>
+    
+    
+    <tr>
+    <td><h3>Address: </h3></td>
+    <td><textarea name="address" type="address" col="30" row="10" ></textarea></td>
+    </tr>
+    
+    
+    <tr>
+    <td><h3>Date of Birth: </h3></td>
+    <td><input name="date" type="date"  ></td>
+    </tr>
+    
+    <tr>
+    <td><h3>Email id: </h3></td>
+    <td><input name="mail" type="mail" size="40" ></td>
+    </tr>
+    
+    
+    <tr>
+    <td><h3>Phone no: </h3></td>
+    <td><input name="no" type="text" size="40" >
+    <span id="nmbrtxt"></span></td>
+    </tr>
+    
+    <tr>
+    
+    <td><input type="submit" value="SUBMIT" style="background-color:DodgerBlue;  border: 2px solid #4CAF50;  width: 250px; height:50px" ></td>
+    </tr>
+    
+    
+    </body>
+    </html>
+    
